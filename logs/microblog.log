@@ -76,3 +76,4 @@ elasticsearch.exceptions.ConnectionError: ConnectionError(<urllib3.connection.HT
 2021-01-04 19:26:21,868 INFO: Microblog startup [in C:\Users\使用者\Documents\python檔案\FLASK ZH MEGA\app\__init__.py:107]
 2021-01-04 19:26:41,662 INFO: Microblog startup [in C:\Users\使用者\Documents\python檔案\FLASK ZH MEGA\app\__init__.py:107]
 2021-01-04 19:48:20,369 INFO: Microblog startup [in C:\Users\使用者\Documents\python檔案\FLASK ZH MEGA\app\__init__.py:107]
+2021-01-04 21:21:32,594 INFO: Microblog startup [in C:\Users\使用者\Documents\python檔案\FLASK ZH MEGA\app\__init__.py:107]
