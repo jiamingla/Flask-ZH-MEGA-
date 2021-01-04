@@ -1,0 +1,74 @@
+2021-01-04 17:45:24,131 ERROR: Exception on /search [GET] [in c:\users\使用者\appdata\local\programs\python\python38\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\使用者\appdata\local\programs\python\python38\lib\site-packages\urllib3\connection.py", line 156, in _new_conn
+    conn = connection.create_connection(
+  File "c:\users\使用者\appdata\local\programs\python\python38\lib\site-packages\urllib3\util\connection.py", line 84, in create_connection
+    raise err
+  File "c:\users\使用者\appdata\local\programs\python\python38\lib\site-packages\urllib3\util\connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 無法連線，因為目標電腦拒絕連線。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\使用者\appdata\local\programs\python\python38\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 241, in perform_request
+    response = self.pool.urlopen(
+  File "c:\users\使用者\appdata\local\programs\python\python38\lib\site-packages\urllib3\connectionpool.py", line 719, in urlopen
+    retries = retries.increment(
+  File "c:\users\使用者\appdata\local\programs\python\python38\lib\site-packages\urllib3\util\retry.py", line 376, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "c:\users\使用者\appdata\local\programs\python\python38\lib\site-packages\urllib3\packages\six.py", line 735, in reraise
+    raise value
+  File "c:\users\使用者\appdata\local\programs\python\python38\lib\site-packages\urllib3\connectionpool.py", line 665, in urlopen
+    httplib_response = self._make_request(
+  File "c:\users\使用者\appdata\local\programs\python\python38\lib\site-packages\urllib3\connectionpool.py", line 387, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "c:\users\使用者\appdata\local\programs\python\python38\lib\http\client.py", line 1230, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "c:\users\使用者\appdata\local\programs\python\python38\lib\http\client.py", line 1276, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "c:\users\使用者\appdata\local\programs\python\python38\lib\http\client.py", line 1225, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "c:\users\使用者\appdata\local\programs\python\python38\lib\http\client.py", line 1004, in _send_output
+    self.send(msg)
+  File "c:\users\使用者\appdata\local\programs\python\python38\lib\http\client.py", line 944, in send
+    self.connect()
+  File "c:\users\使用者\appdata\local\programs\python\python38\lib\site-packages\urllib3\connection.py", line 184, in connect
+    conn = self._new_conn()
+  File "c:\users\使用者\appdata\local\programs\python\python38\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000016DE3161250>: Failed to establish a new connection: [WinError 10061] 無法連線，因為目標電腦拒絕連線。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\使用者\appdata\local\programs\python\python38\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\使用者\appdata\local\programs\python\python38\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\使用者\appdata\local\programs\python\python38\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\使用者\appdata\local\programs\python\python38\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\使用者\appdata\local\programs\python\python38\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\使用者\appdata\local\programs\python\python38\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\使用者\appdata\local\programs\python\python38\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\使用者\Documents\python檔案\FLASK ZH MEGA\app\main\routes.py", line 152, in search
+    posts, total = Post.search(g.search_form.q.data, page,
+  File "C:\Users\使用者\Documents\python檔案\FLASK ZH MEGA\app\models.py", line 15, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "C:\Users\使用者\Documents\python檔案\FLASK ZH MEGA\app\search.py", line 22, in query_index
+    search = current_app.elasticsearch.search(
+  File "c:\users\使用者\appdata\local\programs\python\python38\lib\site-packages\elasticsearch\client\utils.py", line 84, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "c:\users\使用者\appdata\local\programs\python\python38\lib\site-packages\elasticsearch\client\__init__.py", line 1547, in search
+    return self.transport.perform_request(
+  File "c:\users\使用者\appdata\local\programs\python\python38\lib\site-packages\elasticsearch\transport.py", line 351, in perform_request
+    status, headers_response, data = connection.perform_request(
+  File "c:\users\使用者\appdata\local\programs\python\python38\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 254, in perform_request
+    raise ConnectionError("N/A", str(e), e)
+elasticsearch.exceptions.ConnectionError: ConnectionError(<urllib3.connection.HTTPConnection object at 0x0000016DE3161250>: Failed to establish a new connection: [WinError 10061] 無法連線，因為目標電腦拒絕連線。) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x0000016DE3161250>: Failed to establish a new connection: [WinError 10061] 無法連線，因為目標電腦拒絕連線。)
+2021-01-04 17:50:26,116 INFO: Microblog startup [in C:\Users\使用者\Documents\python檔案\FLASK ZH MEGA\app\__init__.py:90]
