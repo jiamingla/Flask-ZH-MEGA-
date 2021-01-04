@@ -73,3 +73,5 @@ Traceback (most recent call last):
 elasticsearch.exceptions.ConnectionError: ConnectionError(<urllib3.connection.HTTPConnection object at 0x000002B5D7690250>: Failed to establish a new connection: [WinError 10061] 無法連線，因為目標電腦拒絕連線。) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x000002B5D7690250>: Failed to establish a new connection: [WinError 10061] 無法連線，因為目標電腦拒絕連線。)
 2021-01-04 17:51:44,338 INFO: Microblog startup [in C:\Users\使用者\Documents\python檔案\FLASK ZH MEGA\app\__init__.py:90]
 2021-01-04 17:53:20,950 INFO: Microblog startup [in C:\Users\使用者\Documents\python檔案\FLASK ZH MEGA\app\__init__.py:90]
+2021-01-04 19:26:21,868 INFO: Microblog startup [in C:\Users\使用者\Documents\python檔案\FLASK ZH MEGA\app\__init__.py:107]
+2021-01-04 19:26:41,662 INFO: Microblog startup [in C:\Users\使用者\Documents\python檔案\FLASK ZH MEGA\app\__init__.py:107]
